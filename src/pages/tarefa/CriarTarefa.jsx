@@ -78,7 +78,7 @@ const CriarTarefa = ({handleClose, tarefas, setTarefas}) =>{
             </FormControl>
           </Grid>
           <Grid container spacing={2} mt={1}>
-            <Grid item xs={3}>  
+            <Grid item xs={3.5}>  
               <FormControl>
                 <Input id="tarefa_inicio" type="date" aria-describedby="tarefa_inicio_helper_text" value={inicioTarefa} onChange={e => { setInicioTarefa(e.target.value) }}
                   sx={{
@@ -90,38 +90,6 @@ const CriarTarefa = ({handleClose, tarefas, setTarefas}) =>{
                 <FormHelperText id="tarefa_inicio_helper_text">Início da Tarefa.</FormHelperText>
               </FormControl>
             </Grid>  
-            <Grid item xs={3}>  
-              <FormControl>
-                <Input id="tarefa_fim" type="date" aria-describedby="tarefa_fim_helper_text" value={fimTarefa} onChange={e => { setFimTarefa(e.target.value) }}
-                  sx={{
-                    color:'rgba(0, 0, 0, 0.6)',
-                    fontWeight: 400,
-                    paddingLeft:'13px'
-                  }} 
-                />
-                <FormHelperText id="tarefa_fim_helper_text">Fim da Tarefa.</FormHelperText>
-              </FormControl>
-            </Grid>
-            <Grid item xs={3}>  
-              <FormControl fullWidth>
-                <InputLabel htmlFor="tarefa_recurso">Recurso</InputLabel>
-                <Select
-                  id="tarefa_recurso"
-                  value={recursoTarefa}
-                  label="Recurso"
-                  onChange={handleRecurso}
-                  size="small"
-                  sx={{
-                    color:'rgba(0, 0, 0, 0.6)',
-                    fontWeight: 400,
-                  }} 
-                >
-                  <MenuItem value={'Recurso 1'}>Recurso 1</MenuItem>
-                  <MenuItem value={'Recurso 2'}>Recurso 2</MenuItem>
-                  <MenuItem value={'Recurso 3'}>Recurso 3</MenuItem>
-                </Select>
-              </FormControl>
-            </Grid>
             <Grid item xs={3}>  
               <FormControl fullWidth>
                 <InputLabel htmlFor="tarefa_recurso">Status</InputLabel>
@@ -143,11 +111,11 @@ const CriarTarefa = ({handleClose, tarefas, setTarefas}) =>{
               </FormControl>
             </Grid>
             <Grid container spacing={2} pl={2} mt={2}>
-              <Grid item xs={1}>
-                <Button size="small" variant="contained" onClick={handleSalvar}>Salvar</Button>
+              <Grid item xs={1.5}>
+                <Button size="small" variant="contained" color='secondary' onClick={handleSalvar}>Salvar</Button>
               </Grid>  
-              <Grid item xs={1}>  
-                <Button size="small" variant="outlined" onClick={handleClose}>Cancelar</Button>  
+              <Grid item xs={1.5}>  
+                <Button size="small" variant="outlined" color='secondary' onClick={handleClose}>Cancelar</Button>  
               </Grid>
             </Grid>  
           </Grid>
